@@ -18,6 +18,18 @@ angular.module('main', ['ionic', 'main.controllers'])
 
 	$stateProvider
 
+    .state('login', {
+      url: "/login",
+      templateUrl: "templates/login.html",
+      controller:'LoginCtrl'
+    })
+
+    .state('disclaimer', {
+      url: "/disclaimer",
+      templateUrl: "templates/disclaimer.html",
+      controller:'DisclaimerCtrl'
+    })
+
     .state('tab', {
       url: "/tab",
       abstract: true,
@@ -67,5 +79,5 @@ angular.module('main', ['ionic', 'main.controllers'])
     })
 
 
-	$urlRouterProvider.otherwise('tab/home');
+	$urlRouterProvider.otherwise('/login');
 });
