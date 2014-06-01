@@ -3,47 +3,37 @@
   <head>
     <meta charset="utf-8">
     <title>Todo</title>
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, userP-scalable=no, width=device-width">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
 
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
+    <script src="js/controller.js"></script>
     <script src="js/app.js"></script>
 
     <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
     <script src="cordova.js"></script>
   </head>
-  <body>
-  <div ng-app="main">
+  <body ng-app="main" animation="slide-left-right-ios7">
+  <!-- <div> -->
 
-    <div ng-controller="OverlordCtrl">
+    <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+      <ion-nav-back-button class="button-icon icon ion-chevron-left">
+        Back
+      </ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-nav-view></ion-nav-view>
+
+    <!-- <div ng-controller="OverlordCtrl">
       <div class="bar bar-header bar-light">
         <h1 class="title">Disclaimer</h1>
       </div>
       <br><br><br>
 
-      <!-- Login Page -->
-      <div ng-controller="LoginCtrl">
-        <center>
-          <img ng-src="img/epa-logo.svg" width="200px" height="200px">
-          <h2>Harmful Algae Bloom Reporting</h2>
-          <div class="list list-inset">
-            <label class="item item-input">
-              <input type="text" placeholder="First Name">
-            </label>
-            <label class="item item-input">
-              <input type="text" placeholder="Last Name">
-            </label>
-            <button class="button button-block button-positive">
-              Login
-            </button>
-          </div>
-        </center>
-      </div>
-
       <!-- Disclaimer Page -->
-      <div ng-controller="DisclaimerCtrl">
+<!--       <div ng-controller="DisclaimerCtrl">
         <div ng-hide="isUserAccepted">
 
           <div class="row">
@@ -74,14 +64,14 @@
           </div>
 
           <!-- Camera Page -->
-          <div ng-controller="CameraCtrl">
+<!--           <div ng-controller="CameraCtrl">
             <div ng-show="isUserAccepted">
 
               <div class="row">
                 <div class="col col-50">
 
                   <!-- Take Picture -->
-                  <button class="button" ng-click="picture()">
+                  <!-- <button class="button" ng-click="picture()">
                     Capture Image
                   </button>
 
@@ -97,7 +87,7 @@
         </div>
 
 
-      </div>
+      </div> -->
 
       <!-- <script src="js/angular.min.js" type="text/javascript" charset="utf-8" async defer></script> -->
     </body>

@@ -1,35 +1,50 @@
-angular.module('main', ['ionic']);
+angular.module('main', ['ionic', 'main.controllers'])
 
-function OverlordCtrl($scope){
-	$scope.isUserAccepted = false;
+.run(function($ionicPlatform) {
+  $ionicPlatform.ready(function() {
+    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+    // for form inputs)
+    if(window.cordova && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    }
+    if(window.StatusBar) {
+      // org.apache.cordova.statusbar required
+      StatusBar.styleDefault();
+    }
+  });
+})
 
-	$scope.toggleUserAccepted = function(){
-		$scope.isUserAccepted = !$scope.isUserAccepted;
-	}
-}
+.config(function($stateProvider, $urlRouterProvider) {
 
-function DisclaimerCtrl(){
-}
+	$stateProvider
 
-function CameraCtrl($scope){
-	$scope.takenPicture = "img/no_pic_available.jpg"
-	
-	$scope.picture = function Picture(){
-		navigator.camera.getPicture(onSuccess, onFail, {
-	  				quality: 75,
-	  				destinationType: Camera.Destination.DATA_URL,
-	  			});
+    .state('tab', {
+      url: "/tab",
+      abstract: true,
+      templateUrl: "templates/tabs.html"
+    })
 
-	  	function onSuccess(imageData) {
-	  		alert("success");
+    // Each tab has its own nav history stack:
 
-	  	}
+    .state('tab.home', {
+      url: '/home',
+      views: {
+        'tab-home': {
+          templateUrl: 'templates/tab-home.html',
+          controller: 'HomeCtrl'
+        }
+      }
+    })
 
-	  	function onFail(message){
-	  		alert("fail");
-	  	}
-	}
-}
+    .state('tab.about', {
+      url: '/about',
+      views: {
+        'tab-about': {
+          templateUrl: 'templates/tab-about.html',
+          controller: 'AboutCtrl'
+        }
+      }
+    })
 
-function LoginCtrl($scope){
-}
+	$urlRouterProvider.otherwise('tab/home');
+});

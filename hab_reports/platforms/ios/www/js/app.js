@@ -1,32 +1,31 @@
-angular.module('main', ['ionic']);
+angular.module('main', ['ionic', 'main.controllers'])
 
-function OverlordCtrl($scope){
-	$scope.isUserAccepted = false;
+.run(function($ionicPlatform) {
+  $ionicPlatform.ready(function() {
+    //StatusBar.styleDefault();
+  });
+})
 
-	$scope.toggleUserAccepted = function(){
-		$scope.isUserAccepted = !$scope.isUserAccepted;
-	}
-}
+.config(function($stateProvider, $urlRouterProvider) {
 
-function DisclaimerCtrl(){
-}
+	$stateProvider
 
-function CameraCtrl($scope){
-	$scope.picture = function Picture(){
-		alert("navigator: "+navigator.camera);
-		navigator.camera.getPicture(onSuccess, onFail, {
-	  				quality: 75,
-	  				destinationType: Camera.Destination.DATA_URL,
-	  				saveToPhotoAlbum: true
-	  			});
-		alert("something");
-	  	function onSuccess(imageData) {
-	  		alert("success");
+	// setup an abstract state for the tabs directive
+    .state('tab', {
+      url: "/tab",
+      abstract: true,
+      templateUrl: "tabs.html"
+    })
 
-	  	}
+    .state('login', {
+      url: '/login',
+      views: {
+        'login': {
+          templateUrl: 'templates/login.html',
+          controller: 'LoginCtrl'
+        }
+      }
+    })
 
-	  	function onFail(message){
-	  		alert("fail");
-	  	}
-	}
-}
+	$urlRouterProvider.otherwise('/');
+});
