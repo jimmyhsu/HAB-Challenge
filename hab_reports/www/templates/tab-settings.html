@@ -5,7 +5,7 @@
     	<div class="input-label">
 	      Title
 	    </div>
-	    <select>
+	    <select ng-model="login.title">
 	      <option>Please Select</option>
 	      <option>Mr.</option>
 	      <option>Mrs.</option>
@@ -15,29 +15,30 @@
 	  </label>
 	  <label class="item item-input">
 	  	<span class="input-label">First Name</span>
-	    <input type="text">
+	    <input type="text" ng-model="login.fname">
 	  </label>
 	  <label class="item item-input">
 	    <span class="input-label">Last Name</span>
-	    <input type="text">
+	    <input type="text" ng-model="login.lname">
 	  </label>
  	  <label class="item item-input">
 	  	<span class="input-label">Organization</span>
-	    <input type="text">
+	    <input type="text" ng-model="login.org">
 	  </label>
 	  <label class="item item-input">
 		<span class="input-label">Telephone</span>
-		<input type="tel">
+		<input type="tel" ng-model="login.tel">
 	  </label>
 	  <label class="item item-input">
 		<span class="input-label">Email</span>
-		<input type="email">
+		<input type="email" ng-model="login.email">
 	  </label>
 	</div>
 	<div class="padding">
-		<button class="button button-block button-positive">
+		<button class="button button-block button-positive" ng-onclick="saveInf()">
 	      Save
 	    </button>
     </div>
+    {{rootScope.login.fname}}
   </ion-content>
 </ion-view>
