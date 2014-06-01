@@ -9,6 +9,18 @@ angular.module('main.controllers', [])
 	
 })
 
+.controller('HomeCtrl', function($scope){
+	
+})
+
+.controller('AboutCtrl', function($scope){
+	
+})
+
+.controller('SettingsCtrl', function($scope){
+	
+})
+
 .controller('DisclaimerCtrl', function(){
 	
 })
