@@ -2,7 +2,15 @@ angular.module('main', ['ionic', 'main.controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
-    //StatusBar.styleDefault();
+    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+    // for form inputs)
+    if(window.cordova && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    }
+    if(window.StatusBar) {
+      // org.apache.cordova.statusbar required
+      StatusBar.styleDefault();
+    }
   });
 })
 
@@ -10,22 +18,54 @@ angular.module('main', ['ionic', 'main.controllers'])
 
 	$stateProvider
 
-	// setup an abstract state for the tabs directive
     .state('tab', {
       url: "/tab",
       abstract: true,
-      templateUrl: "tabs.html"
+      templateUrl: "templates/tabs.html"
     })
 
-    .state('login', {
-      url: '/login',
+    // Each tab has its own nav history stack:
+
+    .state('tab.home', {
+      url: '/home',
       views: {
-        'login': {
-          templateUrl: 'templates/login.html',
-          controller: 'LoginCtrl'
+        'tab-home': {
+          templateUrl: 'templates/tab-home.html',
+          controller: 'HomeCtrl'
         }
       }
     })
 
-	$urlRouterProvider.otherwise('/');
+    .state('tab.about', {
+      url: '/about',
+      views: {
+        'tab-about': {
+          templateUrl: 'templates/tab-about.html',
+          controller: 'AboutCtrl'
+        }
+      }
+    })
+
+    .state('tab.settings', {
+      url: '/settings',
+      views: {
+        'tab-settings': {
+          templateUrl: 'templates/tab-settings.html',
+          controller: 'SettingsCtrl'
+        }
+      }
+    })
+
+    .state('tab.createreport', {
+      url: '/createreport',
+      views: {
+        'tab-createreport': {
+          templateUrl: 'templates/tab-createreport.html',
+          controller: 'CreateReportCtrl'
+        }
+      }
+    })
+
+
+	$urlRouterProvider.otherwise('tab/home');
 });
