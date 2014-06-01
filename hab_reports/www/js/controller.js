@@ -62,10 +62,10 @@ angular.module('main.controllers', [])
 
 	$scope.inputForms = [
 		{prompt: "Estimate size (sq feet) of bloom", displ:true},
-		{prompt: "What is the name of the body of water?", displ:$scope.hiddenNameOfDrinkingSource},
-		{prompt: "What is the name of the drinking source?", displ:$scope.hiddenNameOfDrinkingSource},
-		{prompt: "What type of samples?", displ:$scope.hiddenTypeOfSample},
-		{prompt: "Sent where for analysis?", displ:$scope.hiddenWhereAnalysis}
+		{prompt: "What is the name of the body of water?", displ:true},
+		{prompt: "What is the name of the drinking source?", displ:true},
+		{prompt: "What type of samples?", displ:true},
+		{prompt: "Sent where for analysis?", displ:true}
 	];
 
 })
