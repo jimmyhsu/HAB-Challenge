@@ -26,7 +26,15 @@ angular.module('main.controllers', [])
 	
 })
 
-.controller('SettingsCtrl', function($rootScope){
+.controller('SettingsCtrl', function($rootScope, $scope){
+	$rootScope.saveInf = function() {
+		console.log("asdas");
+		$rootScope.login.fname = $scope.login.fname;
+		$rootScope.login.lname = $scope.login.lname;
+		$rootScope.login.org = $scope.login.org;
+		$rootScope.login.tel = $scope.login.tel;
+		$rootScope.login.email = $scope.login.email;
+	}
 
 })
 
