@@ -68,16 +68,6 @@ angular.module('main', ['ionic', 'main.controllers'])
       }
     })
 
-    .state('tab.createreport', {
-      url: '/createreport',
-      views: {
-        'tab-createreport': {
-          templateUrl: 'templates/tab-createreport.html',
-          controller: 'CreateReportCtrl'
-        }
-      }
-    })
-
 
 	$urlRouterProvider.otherwise('/login');
 });
