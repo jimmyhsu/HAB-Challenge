@@ -1,11 +1,10 @@
-*** Use https://github.com/CodeforBirmingham/HAB-Detection
-
-Code here will be migrated into above branch at a later time.
-
-HAB-Challenge2
+HAB-Challenge
 ==============
 
-The Secondary Challenge
+<b>The Primary Challenge</b><br>
+Develop image detection capability that allows the user to draw a boundry around a HAB and have the application suggest a color of the HAB based on a pre-defined color palette.
+
+<b>The Secondary Challenge</b><br>
 Develop a mobile application that:
 
 <ol>
