@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Todo</title>
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, userP-scalable=no, width=device-width">
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
 
     <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <script src="js/app.js"></script>
 
     <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
     <script src="cordova.js"></script>
@@ -15,24 +17,58 @@
   <body>
   <div ng-app="main">
 
-    <div ng-controller="TwoCtrl">
-      <div class="{{display}}">
-        <div class="bar bar-header bar-light">
-          <h1 class="title">Disclaimer</h1>
-        </div>
+    <div ng-controller="OverlordCtrl">
+        
+        <!-- Disclaimer Page -->
+      <div ng-controller="DisclaimerCtrl">
+        <div ng-hide="isUserAccepted">
 
-        <div class="row">
-          <div class="col">
-            text text text text text text<br>
-            ext etetsgasfsfasfsa
+            <div class="bar bar-header bar-light">
+              <h1 class="title">Disclaimer</h1>
+            </div>
+            
+            <div class="row">
+              <div class="col">
+              
+                <br><br>
+                  <div class="card">
+                    <div class="item item-text-wrap">
+                      <b>HEY!</b><br><br>
+                      If you use this we are going to send the stuff that you input yourself to an agency who does great things. 
+                      <br><br>
+                      We are going to grab your geo-location.
+                      
+                    </div>
+                  </div>
+
+                  <center>
+                    <button class="button button-balanced" ng-click="toggleUserAccepted()">
+                  Accept Terms
+              </button>
+            </center>
+
+              </div>
           </div>
+
         </div>
       </div>
+
+      <!-- Camera functionality -->
+      <div ng-controller="CameraCtrl">
+        <div ng-show="isUserAccepted">
+          
+        <button class="button" ng-click="picture()">
+          Pic Me Baby One More Time
+        </button>
+
+        </div>
+      </div>
+
     </div>
-    
+
+
   </div>
 
-  <script src="js/app.js"></script>
-  <script src="js/angular.min.js" type="text/javascript" charset="utf-8" async defer></script>
+  <!-- <script src="js/angular.min.js" type="text/javascript" charset="utf-8" async defer></script> -->
   </body>
 </html>
