@@ -13,6 +13,12 @@ angular.module('main.controllers', [])
 })
 
 .controller('HomeCtrl', function($scope){
+	$scope.createReport = function(){
+		$state.go("createreport")
+	}
+})
+
+.controller('CreateReportCtrl', function($scope){
 	
 })
 
