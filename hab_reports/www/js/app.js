@@ -48,10 +48,14 @@ angular.module('main', ['ionic', 'main.controllers'])
       }
     })
 
-    .state('createreport', {
+    .state('tab.createreport', {
       url: "/createreport",
-      templateUrl: "templates/createreport.html",
-      controller:'CreateReportCtrl'
+      views: {
+        'tab-home': {
+          templateUrl: "templates/createreport.html",
+          controller: 'CreateReportCtrl'
+        }
+      }
     })
 
     .state('tab.about', {
