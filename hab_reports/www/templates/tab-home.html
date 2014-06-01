@@ -1,6 +1,12 @@
 <ion-view title="Home" ng-controller="HomeCtrl">
-  <ion-content class="has-header padding main-action">
-  <a class="button button-block button-positive padding-vertical" href="#/tab/createreport">
+  <ion-content class="has-header main-action">
+    <div class="card">
+      <div class="item item-text-wrap padding-vertical">
+        <center>Welcome, {{user.title}} {{user.fname}} {{user.lname}}!</center>
+      </div>
+    </div>
+    <div class="padding">
+    <button class="button button-block button-positive padding-vertical" ng-click="createReport()">
       Create Report
     </a>
     <button class="button button-block button-positive padding-vertical">
@@ -9,5 +15,6 @@
     <button class="button button-block button-positive padding-vertical" ng-click="logout()">
       Logout
     </button>
+    </div>
   </ion-content>
 </ion-view>

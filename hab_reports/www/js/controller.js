@@ -1,14 +1,17 @@
 angular.module('main.controllers', [])
 
-.controller('LoginCtrl', function($scope,$state){
+.controller('LoginCtrl', function($rootScope, $scope,$state){
+	$rootScope.user = {title:'', fname: '', lname: '', org: '', tel: '', email: ''};
 	$scope.login = function(){
 		$state.go("disclaimer")
 	}
+
 })
 
 .controller('DisclaimerCtrl', function($scope,$state){
 	$scope.acceptDisclaimer = function(){
-		$state.go("tab.home")
+		//$state.go("tab.home")
+		$state.go("tab.settings")
 	}
 })
 
@@ -18,7 +21,7 @@ angular.module('main.controllers', [])
 	}
 })
 
-.controller('CreateReportCtrl', function($scope){
+.controller('CreateReportCtrl', function($scope, $window){
 	$scope.picture = "img/no_pic_available.jpg"
 	$scope.hiddenNameOfWaterBody = false;
 	$scope.hiddenNameOfDrinkingSource = false;
@@ -27,18 +30,21 @@ angular.module('main.controllers', [])
 
 	$scope.takePhoto = function(){
 		navigator.camera.getPicture(onSuccess, onFail, { 
-			quality: 100,
+			quality: 50,
 			saveToPhotoAlbum: true,
-			encodingType: Camera.EncodingType.JPEG
+      destinationType: Camera.DestinationType.FILE_URI
 		});
 
 		function onSuccess(imageURI) {
-		    $scope.picture = imageURI;
+      var elem = $window.document.getElementById("report-photo");
+      elem.src = imageURI;
 		}
 
-		function onFail(message) {
-		    alert('Failed because: ' + message);
-		}
+    function onFail(message) {
+      setTimeout(function(){
+        alert('Failed because: ' + message);
+      }, 0.5);
+    }
 
 	}
 
@@ -65,7 +71,32 @@ angular.module('main.controllers', [])
 	
 })
 
-.controller('SettingsCtrl', function($rootScope){
+.controller('SettingsCtrl', function($rootScope, $scope, $window){
+	//console.log($window.document.getElementById('user-title').value);
+	
+	$window.document.getElementById('user-title').value = $rootScope.user.title;
+	$window.document.getElementById('user-fname').value = $rootScope.user.fname;
+	$window.document.getElementById('user-lname').value = $rootScope.user.lname;
+	$window.document.getElementById('user-org').value = $rootScope.user.org;
+	$window.document.getElementById('user-tel').value = $rootScope.user.tel;
+	$window.document.getElementById('user-email').value = $rootScope.user.email;
+
+	$scope.saveInf = function() {
+		$rootScope.user.title = $window.document.getElementById('user-title').value;
+		$rootScope.user.fname = $window.document.getElementById('user-fname').value;
+		$rootScope.user.lname = $window.document.getElementById('user-lname').value;
+		$rootScope.user.org = $window.document.getElementById('user-org').value;
+		$rootScope.user.tel = $window.document.getElementById('user-tel').value;
+		$rootScope.user.email = $window.document.getElementById('user-email').value;
+		console.log($rootScope.user);
+		// console.log($window.document.getElementByaId('user-fname').value);
+		// $rootScope.user.fname = $scope.user.fname;
+		// $rootScope.user.lname = $scope.user.lname;
+		// $rootScope.user.org = $scope.user.org;
+		// $rootScope.user.tel = $scope.user.tel;
+		// $rootScope.user.email = $scope.user.email;
+		
+	}
 
 })
 
