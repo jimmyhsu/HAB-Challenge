@@ -12,6 +12,8 @@ function DisclaimerCtrl(){
 }
 
 function CameraCtrl($scope){
+	$scope.takenPicture = "img/no_pic_available.jpg"
+	
 	$scope.picture = function Picture(){
 		navigator.camera.getPicture(onSuccess, onFail, {
 	  				quality: 75,
