@@ -18,14 +18,27 @@ angular.module('main.controllers', [])
 	}
 })
 
-.controller('CreateReportCtrl', function($rootScope,$scope){
-	$rootScope.picture = "img/no_pic_available.jpg"
+.controller('CreateReportCtrl', function($scope){
+	$scope.picture = "img/no_pic_available.jpg"
 	$scope.hiddenNameOfWaterBody = true;
 	$scope.hiddenNameOfDrinkingSource = true;
 	$scope.hiddenTypeOfSample = true;
 	$scope.hiddenWhereAnalysis = true;
 
 	$scope.takePhoto = function(){
+		navigator.camera.getPicture(onSuccess, onFail, { 
+			quality: 100,
+			saveToPhotoAlbum: true,
+			encodingType: Camera.EncodingType.JPEG
+		});
+
+		function onSuccess(imageURI) {
+		    $scope.picture = imageURI;
+		}
+
+		function onFail(message) {
+		    alert('Failed because: ' + message);
+		}
 
 	}
 
