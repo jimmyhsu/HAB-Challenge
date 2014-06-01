@@ -1,7 +1,7 @@
 angular.module('main.controllers', [])
 
 .controller('LoginCtrl', function($rootScope, $scope,$state){
-	$rootScope.user = {title:'', fname: '', lname: '', org: '', tel: '', email: ''};
+	$rootScope.user = {title:'', fname: 'New', lname: 'User', org: '', tel: '', email: ''};
 	$scope.login = function(){
 		$state.go("disclaimer")
 	}
@@ -74,7 +74,7 @@ angular.module('main.controllers', [])
 	
 })
 
-.controller('SettingsCtrl', function($rootScope, $scope, $window){
+.controller('SettingsCtrl', function($rootScope, $scope, $window, $state){
 	//console.log($window.document.getElementById('user-title').value);
 	
 	$window.document.getElementById('user-title').value = $rootScope.user.title;
@@ -91,13 +91,8 @@ angular.module('main.controllers', [])
 		$rootScope.user.org = $window.document.getElementById('user-org').value;
 		$rootScope.user.tel = $window.document.getElementById('user-tel').value;
 		$rootScope.user.email = $window.document.getElementById('user-email').value;
-		console.log($rootScope.user);
-		// console.log($window.document.getElementByaId('user-fname').value);
-		// $rootScope.user.fname = $scope.user.fname;
-		// $rootScope.user.lname = $scope.user.lname;
-		// $rootScope.user.org = $scope.user.org;
-		// $rootScope.user.tel = $scope.user.tel;
-		// $rootScope.user.email = $scope.user.email;
+		// console.log($rootScope.user);
+		$state.go("tab.home");
 		
 	}
 
