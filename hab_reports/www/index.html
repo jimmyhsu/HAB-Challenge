@@ -18,69 +18,88 @@
   <div ng-app="main">
 
     <div ng-controller="OverlordCtrl">
-
       <div class="bar bar-header bar-light">
         <h1 class="title">Disclaimer</h1>
       </div>
       <br><br>
 
+      <!-- Login Page -->
+      <div ng-controller="LoginCtrl">
+        <center>
+          <img ng-src="img/ionic.png">
+          <h2>Harmful Algae Bloom Reporting</h2>
+          <div class="list list-inset">
+            <label class="item item-input">
+              <input type="text" placeholder="First Name">
+            </label>
+            <label class="item item-input">
+              <input type="text" placeholder="Last Name">
+            </label>
+            <button class="button button-block button-positive">
+              Login
+            </button>
+          </div>
+        </center>
+      </div>
 
-        <!-- Disclaimer Page -->
+      <!-- Disclaimer Page -->
       <div ng-controller="DisclaimerCtrl">
         <div ng-hide="isUserAccepted">
 
-            <div class="row">
-              <div class="col">
-              
-                  <div class="card">
-                    <div class="item item-text-wrap">
-                      <b>HEY!</b><br><br>
-                      If you use this we are going to send the stuff that you input yourself to an agency who does great things. 
-                      <br><br>
-                      We are going to grab your geo-location.
-                      
-                    </div>
-                  </div>
+          <div class="row">
+            <div class="col">
 
-                  <center>
-                    <button class="button button-balanced" ng-click="toggleUserAccepted()">
-                  Accept Terms
-              </button>
-            </center>
+              <div class="card">
+                <div class="item item-text-wrap">
+                  <b>HEY!</b><br><br>
+                  If you use this we are going to send the stuff that you input yourself to an agency who does great things. 
+                  <br><br>
+                  We are going to grab your geo-location.
 
+                </div>
               </div>
+
+              <center>
+                <button class="button button-balanced" ng-click="toggleUserAccepted()">
+                  Accept Terms
+                </button>
+              </center>
+
+            </div>
+          </div>
+
+          <div ng-controller="DisclaimerCtrl">
+            <div ng-hide="isUserAccepted">
+            </div>
+          </div>
+
+          <!-- Camera Page -->
+          <div ng-controller="CameraCtrl">
+            <div ng-show="isUserAccepted">
+
+              <div class="row">
+                <div class="col col-50">
+
+                  <!-- Take Picture -->
+                  <button class="button" ng-click="picture()">
+                    Capture Image
+                  </button>
+
+                  <img src="takenPicture">
+
+                  </img>
+
+                </div>
+              </div>
+
+            </div>
           </div>
 
         </div>
+
+
       </div>
 
-      <!-- Camera Page -->
-      <div ng-controller="CameraCtrl">
-        <div ng-show="isUserAccepted">
-          
-        <div class="row">
-          <div class="col col-50">
-            
-            <!-- Take Picture -->
-            <button class="button" ng-click="picture()">
-              Capture Image
-            </button>
-
-            <img src="takenPicture">
-            
-            </img>
-
-          </div>
-        </div>
-
-        </div>
-      </div>
-
-    </div>
-
-
-  </div>
-
-  <!-- <script src="js/angular.min.js" type="text/javascript" charset="utf-8" async defer></script> -->
-  </body>
-</html>
+      <!-- <script src="js/angular.min.js" type="text/javascript" charset="utf-8" async defer></script> -->
+    </body>
+  </html>

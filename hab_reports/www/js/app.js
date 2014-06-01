@@ -28,3 +28,6 @@ function CameraCtrl($scope){
 	  	}
 	}
 }
+
+function LoginCtrl($scope){
+}
