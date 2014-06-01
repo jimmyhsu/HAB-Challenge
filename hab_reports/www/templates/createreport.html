@@ -26,7 +26,12 @@
 
         </div>
 
-        <!-- add fill in forms -->
+        <div class="list" ng-repeat="v in inputForms">
+          <label class="item item-input item-stacked-label" ng-show="{{v.displ}}">
+            <span class="input-label" ng-show="{{v.displ}}">{{v.prompt}}</span>
+            <input type="text" ng-show="{{v.displ}}" placeholder="input answer here">
+          </label>
+        </div>
 
       </div>
     </div>

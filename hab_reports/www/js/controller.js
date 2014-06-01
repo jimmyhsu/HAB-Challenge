@@ -20,10 +20,10 @@ angular.module('main.controllers', [])
 
 .controller('CreateReportCtrl', function($scope){
 	$scope.picture = "img/no_pic_available.jpg"
-	$scope.hiddenNameOfWaterBody = true;
-	$scope.hiddenNameOfDrinkingSource = true;
-	$scope.hiddenTypeOfSample = true;
-	$scope.hiddenWhereAnalysis = true;
+	$scope.hiddenNameOfWaterBody = false;
+	$scope.hiddenNameOfDrinkingSource = false;
+	$scope.hiddenTypeOfSample = false;
+	$scope.hiddenWhereAnalysis = false;
 
 	$scope.takePhoto = function(){
 		navigator.camera.getPicture(onSuccess, onFail, { 
@@ -43,17 +43,21 @@ angular.module('main.controllers', [])
 	}
 
 	$scope.questions = [
-		{question: "Any color in water column?", answers:["Yes","No"]},
+		{question: "Any color in water column?", answers:["No","Yes"]},
 		{question: "Color of the water?", answers:["Green","Blue","Red","Rust","Brown","Milky White","Purple","Black"]},
-		{question: "Near drinking source?", answers:["Yes","No"]},
-		{question: "Near public lake?", answers:["Yes","No","Unknown"]},
-		{question: "Near public beach?", answers:["Yes", "No", "Unknown"]},
-		{question: "Were samples taken?", answers:["Yes", "No"]},
+		{question: "Near drinking source?", answers:["No","Yes"]},
+		{question: "Near public lake?", answers:["No","Yes","Unknown"]},
+		{question: "Near public beach?", answers:["No", "Yes", "Unknown"]},
+		{question: "Were samples taken?", answers:["No", "Yes"]},
 	];
 
-	$scope.inputForms = ["Estimate size (sq feet) of bloom","What is the name of the body of water?","What is the name of the drinking source?","What type of samples?","Sent where for analysis?"];
-
-
+	$scope.inputForms = [
+		{prompt: "Estimate size (sq feet) of bloom", displ:true},
+		{prompt: "What is the name of the body of water?", displ:$scope.hiddenNameOfDrinkingSource},
+		{prompt: "What is the name of the drinking source?", displ:$scope.hiddenNameOfDrinkingSource},
+		{prompt: "What type of samples?", displ:$scope.hiddenTypeOfSample},
+		{prompt: "Sent where for analysis?", displ:$scope.hiddenWhereAnalysis}
+	];
 
 })
 
@@ -64,23 +68,5 @@ angular.module('main.controllers', [])
 .controller('SettingsCtrl', function($rootScope){
 
 })
-
-.controller('CameraCtrl', function($scope){
-	$scope.picture = function Picture(){
-		navigator.camera.getPicture(onSuccess, onFail, {
-	  				quality: 75,
-	  				destinationType: Camera.Destination.DATA_URL,
-	  			});
-
-	  	function onSuccess(imageData) {
-	  		alert("success");
-
-	  	}
-
-	  	function onFail(message){
-	  		alert("fail");
-	  	}
-	}
-});
 
 
