@@ -128,3 +128,19 @@ Terminating in response to SpringBoard's termination.
 2014-05-31 23:53:42.303 HelloCordova[5456:70b] [CDVTimer][TotalPluginStartup] 2.018988ms
 2014-05-31 23:53:42.438 HelloCordova[5456:70b] Resetting plugins due to page load.
 2014-05-31 23:53:42.638 HelloCordova[5456:70b] Finished load of: file:///Users/tylerbrothers/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/BB7E9454-4A2E-4EB7-8ECB-74CD046BBC7A/HelloCordova.app/www/index.html
+2014-06-01 00:17:50.738 HelloCordova[5725:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-01 00:17:50.766 HelloCordova[5725:70b] Unlimited access to network resources
+2014-06-01 00:17:50.936 HelloCordova[5725:70b] [CDVTimer][keyboard] 0.070989ms
+2014-06-01 00:17:50.937 HelloCordova[5725:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-06-01 00:17:50.937 HelloCordova[5725:70b] [CDVTimer][statusbar] 0.451982ms
+2014-06-01 00:17:50.937 HelloCordova[5725:70b] [CDVTimer][TotalPluginStartup] 1.564980ms
+2014-06-01 00:17:51.077 HelloCordova[5725:70b] Resetting plugins due to page load.
+2014-06-01 00:17:51.293 HelloCordova[5725:70b] Finished load of: file:///Users/tylerbrothers/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/BB7E9454-4A2E-4EB7-8ECB-74CD046BBC7A/HelloCordova.app/www/index.html
+2014-06-01 00:20:36.949 HelloCordova[5931:70b] Multi-tasking -> Device: YES, App: YES
+2014-06-01 00:20:36.960 HelloCordova[5931:70b] Unlimited access to network resources
+2014-06-01 00:20:36.988 HelloCordova[5931:70b] [CDVTimer][keyboard] 0.101984ms
+2014-06-01 00:20:36.989 HelloCordova[5931:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-06-01 00:20:36.990 HelloCordova[5931:70b] [CDVTimer][statusbar] 0.900984ms
+2014-06-01 00:20:36.991 HelloCordova[5931:70b] [CDVTimer][TotalPluginStartup] 3.095031ms
+2014-06-01 00:20:37.129 HelloCordova[5931:70b] Resetting plugins due to page load.
+2014-06-01 00:20:37.326 HelloCordova[5931:70b] Finished load of: file:///Users/tylerbrothers/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/BB7E9454-4A2E-4EB7-8ECB-74CD046BBC7A/HelloCordova.app/www/index.html

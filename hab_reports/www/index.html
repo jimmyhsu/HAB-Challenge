@@ -18,19 +18,20 @@
   <div ng-app="main">
 
     <div ng-controller="OverlordCtrl">
-        
+
+      <div class="bar bar-header bar-light">
+        <h1 class="title">Disclaimer</h1>
+      </div>
+      <br><br>
+
+
         <!-- Disclaimer Page -->
       <div ng-controller="DisclaimerCtrl">
         <div ng-hide="isUserAccepted">
 
-            <div class="bar bar-header bar-light">
-              <h1 class="title">Disclaimer</h1>
-            </div>
-            
             <div class="row">
               <div class="col">
               
-                <br><br>
                   <div class="card">
                     <div class="item item-text-wrap">
                       <b>HEY!</b><br><br>
@@ -53,13 +54,24 @@
         </div>
       </div>
 
-      <!-- Camera functionality -->
+      <!-- Camera Page -->
       <div ng-controller="CameraCtrl">
         <div ng-show="isUserAccepted">
           
-        <button class="button" ng-click="picture()">
-          Pic Me Baby One More Time
-        </button>
+        <div class="row">
+          <div class="col col-50">
+            
+            <!-- Take Picture -->
+            <button class="button" ng-click="picture()">
+              Capture Image
+            </button>
+
+            <img src="takenPicture">
+            
+            </img>
+
+          </div>
+        </div>
 
         </div>
       </div>
