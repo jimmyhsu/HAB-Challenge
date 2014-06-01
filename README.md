@@ -1,5 +1,6 @@
 *** Use https://github.com/CodeforBirmingham/HAB-Detection
 
+Code here will be migrated into above branch at a later time.
 
 HAB-Challenge2
 ==============
