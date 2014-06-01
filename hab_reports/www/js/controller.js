@@ -1,14 +1,17 @@
 angular.module('main.controllers', [])
 
-.controller('LoginCtrl', function($scope,$state){
+.controller('LoginCtrl', function($rootScope, $scope,$state){
+	$rootScope.user = {title:'', fname: '', lname: '', org: '', tel: '', email: ''};
 	$scope.login = function(){
 		$state.go("disclaimer")
 	}
+
 })
 
 .controller('DisclaimerCtrl', function($scope,$state){
 	$scope.acceptDisclaimer = function(){
-		$state.go("tab.home")
+		//$state.go("tab.home")
+		$state.go("tab.settings")
 	}
 })
 
@@ -64,14 +67,31 @@ angular.module('main.controllers', [])
 	
 })
 
-.controller('SettingsCtrl', function($rootScope, $scope){
-	$rootScope.saveInf = function() {
-		console.log("asdas");
-		$rootScope.login.fname = $scope.login.fname;
-		$rootScope.login.lname = $scope.login.lname;
-		$rootScope.login.org = $scope.login.org;
-		$rootScope.login.tel = $scope.login.tel;
-		$rootScope.login.email = $scope.login.email;
+.controller('SettingsCtrl', function($rootScope, $scope, $window){
+	//console.log($window.document.getElementById('user-title').value);
+	
+	$window.document.getElementById('user-title').value = $rootScope.user.title;
+	$window.document.getElementById('user-fname').value = $rootScope.user.fname;
+	$window.document.getElementById('user-lname').value = $rootScope.user.lname;
+	$window.document.getElementById('user-org').value = $rootScope.user.org;
+	$window.document.getElementById('user-tel').value = $rootScope.user.tel;
+	$window.document.getElementById('user-email').value = $rootScope.user.email;
+
+	$scope.saveInf = function() {
+		$rootScope.user.title = $window.document.getElementById('user-title').value;
+		$rootScope.user.fname = $window.document.getElementById('user-fname').value;
+		$rootScope.user.lname = $window.document.getElementById('user-lname').value;
+		$rootScope.user.org = $window.document.getElementById('user-org').value;
+		$rootScope.user.tel = $window.document.getElementById('user-tel').value;
+		$rootScope.user.email = $window.document.getElementById('user-email').value;
+		console.log($rootScope.user);
+		// console.log($window.document.getElementByaId('user-fname').value);
+		// $rootScope.user.fname = $scope.user.fname;
+		// $rootScope.user.lname = $scope.user.lname;
+		// $rootScope.user.org = $scope.user.org;
+		// $rootScope.user.tel = $scope.user.tel;
+		// $rootScope.user.email = $scope.user.email;
+		
 	}
 
 })
