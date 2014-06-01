@@ -18,7 +18,7 @@ angular.module('main.controllers', [])
 	}
 })
 
-.controller('CreateReportCtrl', function($scope){
+.controller('CreateReportCtrl', function($scope, $window){
 	$scope.picture = "img/no_pic_available.jpg"
 	$scope.hiddenNameOfWaterBody = true;
 	$scope.hiddenNameOfDrinkingSource = true;
@@ -27,18 +27,21 @@ angular.module('main.controllers', [])
 
 	$scope.takePhoto = function(){
 		navigator.camera.getPicture(onSuccess, onFail, { 
-			quality: 100,
+			quality: 50,
 			saveToPhotoAlbum: true,
-			encodingType: Camera.EncodingType.JPEG
+      destinationType: Camera.DestinationType.FILE_URI
 		});
 
 		function onSuccess(imageURI) {
-		    $scope.picture = imageURI;
+      var elem = $window.document.getElementById("report-photo");
+      elem.src = imageURI;
 		}
 
-		function onFail(message) {
-		    alert('Failed because: ' + message);
-		}
+    function onFail(message) {
+      setTimeout(function(){
+        alert('Failed because: ' + message);
+      }, 0.5);
+    }
 
 	}
 
