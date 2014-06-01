@@ -38,7 +38,7 @@ angular.module('main.controllers', [])
 		{question: "Were samples taken?", answers:["Yes", "No"]},
 	];
 
-	$scope.inputForms = ["Estimate size (sq feet) of bloom","What is the name of the body of water?","What is the name of the drinking source?","What type of samples?","Sent where for analysis?"]
+	$scope.inputForms = ["Estimate size (sq feet) of bloom","What is the name of the body of water?","What is the name of the drinking source?","What type of samples?","Sent where for analysis?"];
 
 
 
