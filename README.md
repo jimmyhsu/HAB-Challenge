@@ -17,7 +17,7 @@ Develop a mobile application that:
 HAB-Challenge, Detailed
 --------------
 
-*The Primary Challenge (Challenge Number 1)*
+###The Primary Challenge (Challenge Number 1)
 
 The focus of the Primary Challenge is to develop a color detecting function that could be built into the app. The following describes criteria that color detector should meet in order to satisfy the challenge:
 
@@ -32,7 +32,7 @@ The focus of the Primary Challenge is to develop a color detecting function that
   * Ask if suggested color is correct, if not provide dropdown
   * Color Library: Green, Blue, Red, Rust, Brown, Milky white, Purple, Black
 
-*The Secondary Challenge (Challenge Number 2)*
+###The Secondary Challenge (Challenge Number 2)
 
 The following describes criteria and functionality that the app should meet in order to satisfy the Secondary Challenge:
 The mobile app should….
