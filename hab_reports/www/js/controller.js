@@ -17,6 +17,10 @@ angular.module('main.controllers', [])
 	
 })
 
+.controller('SettingsCtrl', function($scope){
+	
+})
+
 .controller('DisclaimerCtrl', function(){
 	
 })

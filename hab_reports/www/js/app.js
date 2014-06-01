@@ -46,5 +46,26 @@ angular.module('main', ['ionic', 'main.controllers'])
       }
     })
 
+    .state('tab.settings', {
+      url: '/settings',
+      views: {
+        'tab-settings': {
+          templateUrl: 'templates/tab-settings.html',
+          controller: 'SettingsCtrl'
+        }
+      }
+    })
+
+    .state('tab.createreport', {
+      url: '/createreport',
+      views: {
+        'tab-createreport': {
+          templateUrl: 'templates/tab-createreport.html',
+          controller: 'CreateReportCtrl'
+        }
+      }
+    })
+
+
 	$urlRouterProvider.otherwise('tab/home');
 });
