@@ -19,6 +19,9 @@ angular.module('main.controllers', [])
 	$scope.createReport = function(){
 		$state.go("createreport")
 	}
+	$scope.logout = function(){
+		$state.go("login")
+	}
 })
 
 .controller('CreateReportCtrl', function($scope, $window){
