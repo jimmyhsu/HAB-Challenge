@@ -507,29 +507,35 @@
         <vLines>false</vLines>
       </controlProperties>
     </control>
-    <control controlID="143" controlTypeID="com.balsamiq.mockups::TextInput" x="2188" y="229" w="202" h="-1" measuredW="49" measuredH="27" zOrder="91" locked="false" isInGroup="-1">
+    <control controlID="143" controlTypeID="com.balsamiq.mockups::TextInput" x="2188" y="269" w="202" h="-1" measuredW="49" measuredH="27" zOrder="91" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Name</text>
       </controlProperties>
     </control>
-    <control controlID="145" controlTypeID="com.balsamiq.mockups::TextInput" x="2188" y="268" w="202" h="-1" measuredW="40" measuredH="27" zOrder="92" locked="false" isInGroup="-1">
-      <controlProperties>
-        <text>Title</text>
-      </controlProperties>
-    </control>
-    <control controlID="146" controlTypeID="com.balsamiq.mockups::TextInput" x="2188" y="304" w="202" h="-1" measuredW="89" measuredH="27" zOrder="93" locked="false" isInGroup="-1">
+    <control controlID="146" controlTypeID="com.balsamiq.mockups::TextInput" x="2188" y="304" w="202" h="-1" measuredW="89" measuredH="27" zOrder="92" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Organization</text>
       </controlProperties>
     </control>
-    <control controlID="147" controlTypeID="com.balsamiq.mockups::TextInput" x="2188" y="340" w="202" h="-1" measuredW="51" measuredH="27" zOrder="94" locked="false" isInGroup="-1">
+    <control controlID="147" controlTypeID="com.balsamiq.mockups::TextInput" x="2188" y="340" w="202" h="-1" measuredW="51" measuredH="27" zOrder="93" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Phone</text>
       </controlProperties>
     </control>
-    <control controlID="148" controlTypeID="com.balsamiq.mockups::TextInput" x="2188" y="381" w="202" h="-1" measuredW="46" measuredH="27" zOrder="95" locked="false" isInGroup="-1">
+    <control controlID="148" controlTypeID="com.balsamiq.mockups::TextInput" x="2188" y="381" w="202" h="-1" measuredW="46" measuredH="27" zOrder="94" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Email</text>
+      </controlProperties>
+    </control>
+    <control controlID="149" controlTypeID="com.balsamiq.mockups::Button" x="2188" y="426" w="202" h="44" measuredW="52" measuredH="27" zOrder="95" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Save</text>
+      </controlProperties>
+    </control>
+    <control controlID="150" controlTypeID="com.balsamiq.mockups::ComboBox" x="2189" y="231" w="201" h="-1" measuredW="56" measuredH="93" zOrder="96" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>up</state>
+        <text>Title%0AMr.%0AMrs.%0AMs.%0ADr.</text>
       </controlProperties>
     </control>
   </controls>
