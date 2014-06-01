@@ -3,15 +3,54 @@
   <head>
     <meta charset="utf-8">
     <title>Todo</title>
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, userP-scalable=no, width=device-width">
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
 
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
+    <script src="js/app.js"></script>
+
     <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
     <script src="cordova.js"></script>
   </head>
   <body>
+  <div ng-app="main">
+
+    <div ng-controller="DisclaimerCtrl">
+      <div ng-hide="isUserAccepted">
+
+        <div class="bar bar-header bar-light">
+          <h1 class="title">Disclaimer</h1>
+        </div>
+
+        <div class="row">
+        	<div class="col">
+        	
+        		<br><br>
+	           	<div class="card">
+	            	<div class="item item-text-wrap">
+	            		<b>HEY!</b> If you use this we are going to send the stuff that you input yourself to an agency who does great things. 
+	            		<br><br>
+	            		<b>Feel great</b>, but be aware that we will send the stuff you said you wanted to. 
+	            		<br><br>
+	            		<b>Be aware</b> that we will use it for good things, and stuff.
+	            		<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	            	</div>
+	            </div>
+
+	            <center>
+		            <button class="button button-balanced" ng-click="isUserAccepted=true">
+							Accept Terms
+					</button>
+				</center>
+
+      		</div>
+    	</div>
+
+    </div>
+  </div>
+
+  <!-- <script src="js/angular.min.js" type="text/javascript" charset="utf-8" async defer></script> -->
   </body>
 </html>
