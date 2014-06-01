@@ -1,10 +1,5 @@
 angular.module('main.controllers', [])
 
-
-.controller('OverlordCtrl',function($scope){
-
-})
-
 .controller('LoginCtrl', function($scope,$state){
 	$scope.login = function(){
 		$state.go("disclaimer")
@@ -25,8 +20,8 @@ angular.module('main.controllers', [])
 	
 })
 
-.controller('SettingsCtrl', function($scope){
-	
+.controller('SettingsCtrl', function($rootScope){
+
 })
 
 .controller('CameraCtrl', function($scope){
