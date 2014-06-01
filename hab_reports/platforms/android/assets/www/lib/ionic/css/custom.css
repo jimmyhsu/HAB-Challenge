@@ -1,9 +1,0 @@
-.main-action div button {
-	margin-top: 10% !important;
-}
-
-@media screen and (orientation:landscape) {
-	.main-action div button {
-		margin-top: auto !important;
-	}
-}
