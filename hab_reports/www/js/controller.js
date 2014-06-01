@@ -12,14 +12,52 @@ angular.module('main.controllers', [])
 	}
 })
 
-.controller('HomeCtrl', function($scope){
+.controller('HomeCtrl', function($scope,$state){
 	$scope.createReport = function(){
 		$state.go("createreport")
 	}
 })
 
-.controller('CreateReportCtrl', function($scope){
-	
+.controller('CreateReportCtrl', function($scope, $window){
+	$scope.picture = "img/no_pic_available.jpg"
+	$scope.hiddenNameOfWaterBody = true;
+	$scope.hiddenNameOfDrinkingSource = true;
+	$scope.hiddenTypeOfSample = true;
+	$scope.hiddenWhereAnalysis = true;
+
+	$scope.takePhoto = function(){
+		navigator.camera.getPicture(onSuccess, onFail, { 
+			quality: 50,
+			saveToPhotoAlbum: true,
+      destinationType: Camera.DestinationType.FILE_URI
+		});
+
+		function onSuccess(imageURI) {
+      var elem = $window.document.getElementById("report-photo");
+      elem.src = imageURI;
+		}
+
+    function onFail(message) {
+      setTimeout(function(){
+        alert('Failed because: ' + message);
+      }, 0.5);
+    }
+
+	}
+
+	$scope.questions = [
+		{question: "Any color in water column?", answers:["Yes","No"]},
+		{question: "Color of the water?", answers:["Green","Blue","Red","Rust","Brown","Milky White","Purple","Black"]},
+		{question: "Near drinking source?", answers:["Yes","No"]},
+		{question: "Near public lake?", answers:["Yes","No","Unknown"]},
+		{question: "Near public beach?", answers:["Yes", "No", "Unknown"]},
+		{question: "Were samples taken?", answers:["Yes", "No"]},
+	];
+
+	$scope.inputForms = ["Estimate size (sq feet) of bloom","What is the name of the body of water?","What is the name of the drinking source?","What type of samples?","Sent where for analysis?"];
+
+
+
 })
 
 .controller('AboutCtrl', function($scope){
@@ -39,8 +77,6 @@ angular.module('main.controllers', [])
 })
 
 .controller('CameraCtrl', function($scope){
-	$scope.takenPicture = "img/no_pic_available.jpg"
-	
 	$scope.picture = function Picture(){
 		navigator.camera.getPicture(onSuccess, onFail, {
 	  				quality: 75,

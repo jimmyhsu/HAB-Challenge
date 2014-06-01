@@ -1,7 +1,35 @@
+<!-- why no back button? -->
 <ion-view title="Create Report" ng-controller="CreateReportCtrl">
   <ion-content class="padding has-header main-action">
     
-  
-    
+    <div class="row">
+      <div class="col">
+
+        <button class="button button-positive" ng-click="takePhoto()">
+          Capture Image
+        </button>
+        
+        <br>
+
+        <img id="report-photo" src="{{picture}}" width="250" height="250">
+
+        <div class="questionList">
+
+          <label class="item item-input item-select" ng-repeat="q in questions">
+            <div class="input-label">
+              {{q.question}}
+            </div>
+            <select>
+              <option ng-repeat="k in q.answers">{{k}}</option>
+            </select>
+          </label>
+
+        </div>
+
+        <!-- add fill in forms -->
+
+      </div>
+    </div>
+
   </ion-content>
 </ion-view>
