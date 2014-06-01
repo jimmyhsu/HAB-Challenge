@@ -1,10 +1,5 @@
 angular.module('main.controllers', [])
 
-
-.controller('OverlordCtrl',function($scope){
-
-})
-
 .controller('LoginCtrl', function($scope,$state){
 	$scope.login = function(){
 		$state.go("disclaimer")
@@ -18,19 +13,21 @@ angular.module('main.controllers', [])
 })
 
 .controller('HomeCtrl', function($scope){
-	$scope.goToCreateReport = function(){
-		//$state.go("tab.home")
+	$scope.createReport = function(){
+		$state.go("createreport")
 	}
-	$scope.logout = function(){
-	}
+})
+
+.controller('CreateReportCtrl', function($scope){
+	
 })
 
 .controller('AboutCtrl', function($scope){
 	
 })
 
-.controller('SettingsCtrl', function($scope){
-	
+.controller('SettingsCtrl', function($rootScope){
+
 })
 
 .controller('CameraCtrl', function($scope){
