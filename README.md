@@ -1,10 +1,10 @@
 HAB-Challenge
 ==============
 
-The Primary Challenge
+<b>The Primary Challenge</b><br>
 Develop image detection capability that allows the user to draw a boundry around a HAB and have the application suggest a color of the HAB based on a pre-defined color palette.
 
-The Secondary Challenge
+<b>The Secondary Challenge</b><br>
 Develop a mobile application that:
 
 <ol>
