@@ -1,12 +1,12 @@
-<ion-view title="Home">
+<ion-view title="Login" ng-controller="LoginCtrl">
   <ion-content class="padding has-header main-action">
-    <button class="button button-block button-stable padding-vertical ">
+    <button class="button button-block button-stable padding-vertical" ng-click="goToCreateReport()">
       Create Report
     </button>
     <button class="button button-block button-stable padding-vertical">
       View Report
     </button>
-    <button class="button button-block button-stable padding-vertical">
+    <button class="button button-block button-stable padding-vertical" ng-click="logout()">
       Logout
     </button>
   </ion-content>
