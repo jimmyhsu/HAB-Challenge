@@ -17,7 +17,7 @@ angular.module('main.controllers', [])
 
 .controller('HomeCtrl', function($scope,$state){
 	$scope.createReport = function(){
-		$state.go("createreport")
+		$state.go("tab.createreport")
 	}
 	$scope.logout = function(){
 		$state.go("login")
