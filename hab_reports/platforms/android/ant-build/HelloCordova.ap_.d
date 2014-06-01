@@ -125,8 +125,9 @@
 /Users/jhsu/Projects/hab-challenge/hab_reports/platforms/android/assets/www/plugins/org.apache.cordova.camera/www/CameraPopoverOptions.js \
 /Users/jhsu/Projects/hab-challenge/hab_reports/platforms/android/assets/www/plugins/org.apache.cordova.device/www \
 /Users/jhsu/Projects/hab-challenge/hab_reports/platforms/android/assets/www/plugins/org.apache.cordova.device/www/device.js \
+/Users/jhsu/Projects/hab-challenge/hab_reports/platforms/android/assets/www/templates/disclaimer.html \
+/Users/jhsu/Projects/hab-challenge/hab_reports/platforms/android/assets/www/templates/login.html \
 /Users/jhsu/Projects/hab-challenge/hab_reports/platforms/android/assets/www/templates/tab-about.html \
-/Users/jhsu/Projects/hab-challenge/hab_reports/platforms/android/assets/www/templates/tab-createreport \
 /Users/jhsu/Projects/hab-challenge/hab_reports/platforms/android/assets/www/templates/tab-home.html \
 /Users/jhsu/Projects/hab-challenge/hab_reports/platforms/android/assets/www/templates/tab-login.html \
 /Users/jhsu/Projects/hab-challenge/hab_reports/platforms/android/assets/www/templates/tab-settings.html \

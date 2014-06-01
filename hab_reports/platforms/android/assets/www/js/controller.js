@@ -5,12 +5,24 @@ angular.module('main.controllers', [])
 
 })
 
-.controller('LoginCtrl', function($scope){
-	
+.controller('LoginCtrl', function($scope,$state){
+	$scope.login = function(){
+		$state.go("disclaimer")
+	}
+})
+
+.controller('DisclaimerCtrl', function($scope,$state){
+	$scope.acceptDisclaimer = function(){
+		$state.go("tab.home")
+	}
 })
 
 .controller('HomeCtrl', function($scope){
-	
+	$scope.goToCreateReport = function(){
+		//$state.go("tab.home")
+	}
+	$scope.logout = function(){
+	}
 })
 
 .controller('AboutCtrl', function($scope){
@@ -18,10 +30,6 @@ angular.module('main.controllers', [])
 })
 
 .controller('SettingsCtrl', function($scope){
-	
-})
-
-.controller('DisclaimerCtrl', function(){
 	
 })
 

@@ -4,6 +4,6 @@
 
 @media screen and (orientation:landscape) {
 	.main-action div button {
-		margin-top: auto;
+		margin-top: auto !important;
 	}
 }
