@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.ionicframework.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>HelloCordova</name>
+    <name>Bloom Buster</name>
     <description>
         An Ionic Framework and Cordova project.
     </description>
-    <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
+    <author email="jimmyhsu@live.com" href="https://github.com/jimmyhsu/HAB-Challenge/">
+      HAB-Reporter Team
     </author>
     <content src="index.html" />
     <access origin="*" />
@@ -14,7 +14,7 @@
     <preference name="UIWebViewBounce" value="false" />
     <preference name="DisallowOverscroll" value="true" />
 
-    <!-- Don't store local date in an iCloud backup. Turn this to "cloud" to enable storage 
+    <!-- Don't store local date in an iCloud backup. Turn this to "cloud" to enable storage
          to be sent to iCloud. Note: enabling this could result in Apple rejecting your app.
     -->
     <preference name="BackupWebStorage" value="none" />

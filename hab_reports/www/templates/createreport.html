@@ -12,6 +12,11 @@
             Capture Image
           </button>
 
+        <button class="button button-block button-positive" ng-click="getLocation()">
+          <i class="icon ion-pinpoint"></i>
+          Grab Geolocation.
+        </button>
+
         </div>
         <div class="padding">
           <div class="questionList">
@@ -30,12 +35,11 @@
           <div class="list" ng-repeat="v in inputForms">
             <label class="item item-input item-stacked-label" ng-show="{{v.displ}}">
               <span class="input-label" ng-show="{{v.displ}}">{{v.prompt}}</span>
-              <input type="text" ng-show="{{v.displ}}" placeholder="input answer here">
+              <input type="text" ng-show="{{v.displ}}" placeholder="Input answer here.">
             </label>
           </div>
 
           <button class="item button button-block button-positive">
-            <i class="icon ion-camera"></i>
             Submit
           </button>
         </div>

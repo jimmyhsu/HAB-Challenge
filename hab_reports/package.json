@@ -1,7 +1,7 @@
 {
-  "name": "ionic-project",
+  "name": "EPA-HAB",
   "version": "1.0.0",
-  "description": "An Ionic project",
+  "description": "Harmful Algae Bloom Reporter",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^0.7.1",

@@ -532,9 +532,9 @@
         <text>Save</text>
       </controlProperties>
     </control>
-    <control controlID="150" controlTypeID="com.balsamiq.mockups::ComboBox" x="2189" y="231" w="201" h="-1" measuredW="56" measuredH="93" zOrder="96" locked="false" isInGroup="-1">
+    <control controlID="150" controlTypeID="com.balsamiq.mockups::ComboBox" x="2189" y="231" w="201" h="-1" measuredW="56" measuredH="24" zOrder="96" locked="false" isInGroup="-1">
       <controlProperties>
-        <state>up</state>
+        <state>closed</state>
         <text>Title%0AMr.%0AMrs.%0AMs.%0ADr.</text>
       </controlProperties>
     </control>
