@@ -164,6 +164,12 @@
         "plugin.google.maps": {
             "API_KEY_FOR_IOS": "AIzaSyCzsHfcTipUxX_k_ZkJk0UOw0_E-WjW4To",
             "PACKAGE_NAME": "com.ionicframework.starter"
+        },
+        "android.support.v4": {
+            "PACKAGE_NAME": "com.ionicframework.starter"
+        },
+        "com.google.playservices": {
+            "PACKAGE_NAME": "com.ionicframework.starter"
         }
     },
     "dependent_plugins": {

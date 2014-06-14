@@ -1,4 +1,4 @@
-angular.module('main.controllers', [])
+angular.module('main.controllers', ["cropme"])
 
 .controller('LoginCtrl', function($rootScope, $scope,$state){
 	$rootScope.user = {title:'', fname: '', lname: '', org: '', tel: '', email: ''};
@@ -30,25 +30,25 @@ angular.module('main.controllers', [])
 	$scope.hiddenNameOfDrinkingSource = false;
 	$scope.hiddenTypeOfSample = false;
 	$scope.hiddenWhereAnalysis = false;
+	$scope.cropping = false;
 
 	$scope.takePhoto = function(){
-		navigator.camera.getPicture(onSuccess, onFail, {
+			navigator.camera.getPicture(onSuccess, onFail, {
 			quality: 50,
-			saveToPhotoAlbum: true,
-      destinationType: Camera.DestinationType.FILE_URI
+			destinationType: Camera.DestinationType.FILE_URI
 		});
 
 		function onSuccess(imageURI) {
-      var elem = $window.document.getElementById("report-photo");
-      elem.src = imageURI;
+			var elem = $window.document.getElementById("report-photo");
+			elem.src = imageURI;
+			$scope.cropping = true; //begin cropping!
 		}
 
-    function onFail(message) {
-      setTimeout(function(){
-        alert('Failed because: ' + message);
-      }, 0.5);
-    }
-
+		function onFail(message) {
+			setTimeout(function(){
+				alert('Failed because: ' + message);
+			}, 0.5);
+		}
 	}
 
 	$scope.questions = [

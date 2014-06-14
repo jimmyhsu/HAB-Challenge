@@ -2,47 +2,54 @@
 <ion-view title="Create Report" ng-controller="CreateReportCtrl">
   <ion-content class="has-header main-action">
 
-        <div class="card">
+    <div class="card">
 
-          <div class="item item-image">
-            <img id="report-photo" src="{{picture}}" width="250" height="250">
-          </div>
-          <button class="item button button-block button-positive" ng-click="takePhoto()">
-            <i class="icon ion-camera"></i>
-            Capture Image
-          </button>
+        <button class="item button button-block button-positive" ng-click="takePhoto()">
+          <i class="icon ion-camera"></i>
+          Capture Image
+        </button>
+
+        <cropme
+          width="250"
+          height="250"
+          type="png"
+          ratio="1"
+          destination-width="250"
+          ng-hide={{cropping}}>
+        </cropme>
 
         <button class="button button-block button-positive" ng-click="getLocation()">
           <i class="icon ion-pinpoint"></i>
           Grab Geolocation.
         </button>
 
-        </div>
-        <div class="padding">
-          <div class="questionList">
+    </div>
 
-            <label class="item item-input item-select" ng-repeat="q in questions">
-              <div class="input-label">
-                {{q.question}}
-              </div>
-              <select>
-                <option ng-repeat="k in q.answers">{{k}}</option>
-              </select>
-            </label>
+    <div class="padding">
+      <div class="questionList">
 
+        <label class="item item-input item-select" ng-repeat="q in questions">
+          <div class="input-label">
+            {{q.question}}
           </div>
+          <select>
+            <option ng-repeat="k in q.answers">{{k}}</option>
+          </select>
+        </label>
 
-          <div class="list" ng-repeat="v in inputForms">
-            <label class="item item-input item-stacked-label" ng-show="{{v.displ}}">
-              <span class="input-label" ng-show="{{v.displ}}">{{v.prompt}}</span>
-              <input type="text" ng-show="{{v.displ}}" placeholder="Input answer here.">
-            </label>
-          </div>
+      </div>
 
-          <button class="item button button-block button-positive">
-            Submit
-          </button>
-        </div>
+      <div class="list" ng-repeat="v in inputForms">
+        <label class="item item-input item-stacked-label" ng-show="{{v.displ}}">
+          <span class="input-label" ng-show="{{v.displ}}">{{v.prompt}}</span>
+          <input type="text" ng-show="{{v.displ}}" placeholder="Input answer here.">
+        </label>
+      </div>
+
+      <button class="item button button-block button-positive">
+        Submit
+      </button>
+    </div>
         <br>
         
 
